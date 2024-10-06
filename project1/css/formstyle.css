@@ -1,0 +1,155 @@
+/* Skip link */
+
+.skipLink {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: white;
+  color: #487ac1;
+  height: 35px;
+  transform: translate(0px, -35px);
+  text-decoration: none;
+  transition: transform 500ms ease-in-out;
+}
+
+.skipLink:focus {
+  transform: translate(0px, 0px);
+
+}
+
+/* Main contant */
+
+.contant {
+  margin: 100px auto 0px auto;
+  /*width: 1200px;
+    height: 600px;*/
+  width: 100%;
+}
+
+.title {
+  margin-top: 300px;
+  font-size: 60px;
+  text-align: center;
+}
+
+/* Form */
+
+form > div {
+  margin: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-name-lastname {
+  display: flex;
+  flex-direction: row;
+
+  & input {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #88909f;
+    border-radius: 8px;
+    width: 330px; 
+    margin-left: 10px;
+  }
+
+  & label {
+    margin: 10px;
+    margin-left: 73px;
+  }
+}
+
+.input-textarea {
+  display: flex;
+  flex-direction: row;
+  & label {
+    margin: 10px;
+  }
+  & textarea {
+    width: 860px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #88909f;
+    border-radius: 8px;
+  }
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  & label {
+    margin-right: 50px;
+  }
+  & input {
+    margin-right: 5px;
+  }
+}
+
+.selectMenu select {
+  font-size: 25px;
+  color: #333333;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px 20px;
+  width: 300px;
+  margin-left: 17px;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  & label {
+    font-size: 25px;
+    margin-left: 5px;
+    margin-right: 250px;
+  }
+}
+
+.terms {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  & a {
+    color: #88909f;
+  }
+}
+
+.termsCheckBox label {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.submit input {
+  background-color: #a9c5ec;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 50px;
+  width: 300px;
+  color: #88909f;
+  font-size: 35px;
+  font-family: "Times New Roman", Times, serif;
+  animation-name: animationButton;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animationButton {
+  from {
+    background-color: #a9c5ec;
+  }
+  to {
+    background-color: #e8ebf4;
+  }
+}

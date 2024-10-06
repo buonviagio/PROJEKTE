@@ -1,0 +1,130 @@
+body {
+  margin-top: 0px;
+  background-color: #487ac1;
+  background-image: linear-gradient(#487ac1, #cbd1dd);
+  /* color: #88909f; */
+  color: #333333;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main {
+  margin: 50px auto 0 auto;
+  width: 93%;
+  background-image: url("/images/sky1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: white 2px solid;
+  border-radius: 2%;
+}
+
+/* Navigation Bar */
+
+nav {
+  font-family: "Times New Roman", Times, serif;
+  height: 100px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 40px 36px;
+  /* border: #333333 1px solid; */
+  border-radius: 15%;
+  
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: rgb(41, 38, 38);
+}
+
+li {
+  display: inline;
+}
+
+.active {
+  background-color: #87b5e9;
+}
+
+/* Main contant */
+
+.contant {
+  margin: 100px auto 0px auto;
+  /*width: 1200px;
+  height: 600px;*/
+  width: 100%;
+}
+
+.title {
+  margin-top: 300px;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+}
+
+.image-information {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.info-group-image-and-text {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.image {
+  margin-top: 25px;
+  /* margin-left: 50px; */
+  margin-bottom: 25px;
+}
+
+.image img {
+  width: 300px;
+  height: 200px;
+}
+
+.text {
+  /* margin: 25px auto 25px 25px; */
+  width: 50%;
+}
+
+/* Footer */
+
+footer {
+  height: 50px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+footer p {
+  display: inline;
+}
+
+.followUs img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: centflex-start;
+  }
+  nav a {
+    padding: 20px 35px;
+  }
+  .title {
+    margin-top: 200px;
+    font-size: 40px;
+  }
+}

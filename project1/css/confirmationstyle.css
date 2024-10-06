@@ -1,0 +1,88 @@
+body {
+  margin-top: 0px;
+  background-color: #487ac1;
+  background-image: linear-gradient(#487ac1, #cbd1dd);
+  color: #88909f;
+  font-size: 25px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main {
+  margin: 50px auto 0 auto;
+  width: 93%;
+  height: 1000px;
+  background-image: url("/images/sky1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: white 2px solid;
+  border-radius: 2%;
+}
+
+/* Main contant */
+
+.contant {
+  margin: 50px auto 0px auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 60px;
+  text-align: center;
+}
+
+/* Button */
+
+.submit {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.submit a {
+  background-color: #a9c5ec;
+  border-radius: 8px;
+  border: gray 1px solid;
+  cursor: pointer;
+  height: 50px;
+  width: 300px;
+  color: #88909f;
+  font-size: 35px;
+  text-align: center;
+  text-decoration: none;
+  animation-name: animationButton;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animationButton {
+  from {
+    background-color: #a9c5ec;
+  }
+  to {
+    background-color: #e8ebf4;
+  }
+}
+
+/* Footer */
+
+footer {
+  height: 50px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+footer p {
+  display: inline;
+}
+
+.followUs img {
+  width: 20px;
+  height: 20px;
+}
