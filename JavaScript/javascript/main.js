@@ -205,7 +205,7 @@ For example, if const x = 32443;, then the output should be 34423. */
 const functionFromExercise19 = (number) => {
     console.log("Initial Number = ", number)
     let reverseNumber = "";
-    //let counter = 5;
+
     while (number > 0) {
         reverseNumber += number % 10;
         /** i used math.floor in order to save number after deviden with out rest */
@@ -252,7 +252,6 @@ const functionFromExercise21 = (string) => {
             lengthOfTheWord = array[index].length;
             position = index;
         }
-
     }
     console.log(array[position]);
 }
@@ -263,17 +262,16 @@ functionFromExercise21(y);
 Write a function that receives as a parameter a string 
 and replaces all "a" with "1". e.g.: "JavaScript" will become "J1v1Script". */
 const w = "JavaScript";
-const functionFromExercise22 = (string, replaceLetter) => {
+const functionFromExercise22 = (string, replaceLetter, replaceSymbol) => {
     let array = string.split("");
     for (let index = 0; index < array.length; index++) {
         if (array[index] == replaceLetter) {
-            /* console.log(array[index]); */
-            array[index] = 1;
+            array[index] = replaceSymbol;
         }
     }
     console.log(array.join(""));
 }
-functionFromExercise22(w, "a");
+functionFromExercise22(w, "a", 6);
 
 /**Exercise 23
 Write a JavaScript function that converts the first letter of every word 
@@ -339,24 +337,22 @@ Write a function that receives an array and only prints the values that repeat.
 For example, given the following array, the function will print 6,23,33,100.
 var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; */
 
-let functionFromExercise26 = (array) => {
-    //let arraySecond = array;
-    let result = "";
+const functionFromExercise26 = (array) => {
 
-    let marker = 0;
+    let result = "";
 
     for (let i = 0; i < array.length; i++) {
         for (let z = i; z < array.length; z++) {
-            if(array[i] == array[z] && (i != z)) {
+            if (array[i] == array[z] && (i != z)) {
                 result += array[i] + " ";
             }
-            
+
         }
-        
+
     }
     console.log(result);
 }
-var arr = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100,7];
+var arr = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100, 7];
 functionFromExercise26(arr);
 
 /**
@@ -371,7 +367,7 @@ The function will add three list items to the unordered list.
  */
 
 const myBandList = (array) => {
-    let linkToUl = document.querySelector("ul");
+    const linkToUl = document.querySelector("ul");
     for (let index = 0; index < array.length; index++) {
         let liElement = document.createElement("li");
         liElement.textContent = array[index];
@@ -379,4 +375,31 @@ const myBandList = (array) => {
     }
 }
 
-myBandList(['Dire Straits', 'Kansas', 'Steely Dan', 'Scissor Sister', 'Imagine Dragons', 'Backstreet boys', 'N Sync', ]);
+myBandList(['Dire Straits', 'Kansas', 'Steely Dan', 'Scissor Sister', 'Imagine Dragons', 'Backstreet boys', 'N Sync',]);
+
+/** Exercise 28
+Write a function called addMultTable(rows, cols) that will create a multiplication table like this. 
+Start with an empty HTML page that only contains a level 1 heading.
+Your function should use the JavaScript DOM to insert an HTML table after the heading.
+For example, if I call:
+addMultTable(4, 8);
+It will create an HTML table with 4 rows and 8 columns, and append it after the level 1 heading. */
+
+
+const addMultTable = (rows, cols) => {
+    const linkToH1 = document.querySelector("h1");
+    const table = document.createElement("TABLE");
+    /** to appending table after H1, Sibling nodes: 
+     * Nodes that sit on the same level in the DOM tree. */
+    linkToH1.parentNode.insertBefore(table, linkToH1.nextSibling);
+
+    for (let i = 0; i < rows; i++) {
+        let row = table.insertRow(i);
+        for (let z = 0; z < cols; z++) {
+            let cell = row.insertCell(z);
+            cell.textContent = "[ row " + (i + 1) + " cell " + (z + 1) + "]" + "   "
+        }
+    }
+}
+
+addMultTable(4, 8);
