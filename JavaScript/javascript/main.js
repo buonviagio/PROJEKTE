@@ -124,10 +124,10 @@ function functionFromExercise14(triangle) {
     if (typeof triangle.a != "number" || typeof triangle.b != "number" || typeof triangle.c != "number") {
         console.log("Triangle can be defined only with numbers");
 
-    } else if (triangle.a == triangle.b && triangle.a == triangle.c) {
+    } else if (triangle.a === triangle.b && triangle.a === triangle.c) {
         /* must be all sides equals */
         console.log("Triangle is Equilateral");
-    } else if (triangle.a == triangle.b || triangle.a == triangle.c || triangle.b == triangle.c) {
+    } else if (triangle.a === triangle.b || triangle.a === triangle.c || triangle.b === triangle.c) {
         /* must be two sides equals */
         console.log("Triangle is Isosceles");
     } else {
@@ -205,7 +205,7 @@ For example, if const x = 32443;, then the output should be 34423. */
 const functionFromExercise19 = (number) => {
     console.log("Initial Number = ", number)
     let reverseNumber = "";
-    let counter = 5;
+    //let counter = 5;
     while (number > 0) {
         reverseNumber += number % 10;
         /** i used math.floor in order to save number after deviden with out rest */
@@ -235,7 +235,6 @@ const functionFromExercise20 = (string) => {
     array.sort((a, b) => a.localeCompare(b));
     console.log(array.join(""));
 }
-
 functionFromExercise20(x);
 
 /**Exercise 21
@@ -359,3 +358,25 @@ let functionFromExercise26 = (array) => {
 }
 var arr = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100,7];
 functionFromExercise26(arr);
+
+/**
+ * Exercise 27 
+Write a function called myBandList() that will list your favorite bands. 
+Start with an empty HTML page that contains a level 1 heading "My Favorite Bands" and an empty unordered list with ID band-list.
+Your function should use the JavaScript DOM to create li elements
+ and add them to the unordered list, with each li element being a string in an array.
+For example, if I call:
+myBandList(['Dire Straits', 'Kansas', 'Steely Dan']);
+The function will add three list items to the unordered list.
+ */
+
+const myBandList = (array) => {
+    let linkToUl = document.querySelector("ul");
+    for (let index = 0; index < array.length; index++) {
+        let liElement = document.createElement("li");
+        liElement.textContent = array[index];
+        linkToUl.appendChild(liElement);
+    }
+}
+
+myBandList(['Dire Straits', 'Kansas', 'Steely Dan', 'Scissor Sister', 'Imagine Dragons', 'Backstreet boys', 'N Sync', ]);
