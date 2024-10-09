@@ -1,22 +1,22 @@
-body {
+/* body {
   margin-top: 0px;
   background-color: #487ac1;
   background-image: linear-gradient(#487ac1, #cbd1dd);
   color: #88909f;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
-}
+} */
 
 .main {
-  margin: 50px auto 0 auto;
-  width: 93%;
-  height: 1000px;
-  background-image: url("/images/sky1.jpg");
+/*   margin: 50px auto 0 auto;
+  width: 93%; */
+  height: 1200px; 
+/*   background-image: url("/images/sky1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   border: white 2px solid;
-  border-radius: 2%;
-}
+  border-radius: 2%; */
+} 
 
 /* Main contant */
 
@@ -35,10 +35,23 @@ body {
   text-align: center;
 }
 
+/* Table */
+
+table {
+  text-align: center;
+  width: 70%;
+  margin: 50px auto;
+  border:#88909f 2px solid;
+}
+
+table tr:nth-child(2n+1) {
+  background-color: #A9C8EE;
+ }
+
 /* Button */
 
 .submit {
-  margin-top: 100px;
+  /* margin-top: 20px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -70,7 +83,7 @@ body {
 }
 
 /* Footer */
-
+/* 
 footer {
   height: 50px;
   text-align: center;
@@ -85,4 +98,4 @@ footer p {
 .followUs img {
   width: 20px;
   height: 20px;
-}
+} */

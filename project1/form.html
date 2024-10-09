@@ -22,12 +22,12 @@
       <div class="contant">
         <div class="title">Form</div>
 
-        <form action="confirmation.html">
+        <form action="confirmation.html" method="get">
           <div class="input-name-lastname">
             <label for="first-name">First name:</label>
             <input type="text" id="first-name" name="first-name" required />
             <label for="last-name">Last name:</label>
-            <input type="text" id="ast-name" name="ast-name" required />
+            <input type="text" id="last-name" name="last-name" required />
           </div>
           <div class="input-textarea">
             <label for="info">More Information:</label>
@@ -44,23 +44,23 @@
             <input
               type="radio"
               id="byPlane"
-              name="fav_language"
+              name="wayOfTravel"
               value="byPlane"
             />
             <label for="byPlane">Travel by a plane</label>
-            <input type="radio" id="byBus" name="fav_language" value="byBus" />
+            <input type="radio" id="byBus" name="wayOfTravel" value="byBus" />
             <label for="byBus">Travel by a bus</label>
-            <input type="radio" id="byCar" name="fav_language" value="byCar" />
+            <input type="radio" id="byCar" name="wayOfTravel" value="byCar" />
             <label for="byCar">Travel by a car</label>
           </div>
           <div class="selectMenu">
             <label for="country">Choose a Country</label>
             <select id="country" name="country">
-              <option value="au">Australia</option>
-              <option value="ge">Germany</option>
-              <option value="ca">Canada</option>
-              <option value="ua">Ukraine</option>
-              <option value="usa">USA</option>
+              <option value="Australia">Australia</option>
+              <option value="Germany">Germany</option>
+              <option value="Canada">Canada</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="USA">USA</option>
             </select>
           </div>
 
@@ -70,7 +70,7 @@
                 type="checkbox"
                 id="option1"
                 name="option1"
-                value="option1"
+                value="visit cities and ocrans"
               />
               <label for="option1">
                 I want to spend time visiting cities and oceans</label
@@ -81,7 +81,7 @@
                 type="checkbox"
                 id="option2"
                 name="option2"
-                value="option2"
+                value="spent time on the beach"
               />
               <label for="option2">
                 I want to spend all the time on the beach</label
@@ -92,14 +92,14 @@
                 type="checkbox"
                 id="option3"
                 name="option3"
-                value="option3"
+                value="visit only city"
               />
               <label for="option3"> I want to visit only cities</label>
             </div>
           </div>
           <div class="terms">
             <div class="termsCheckBox">
-              <input type="checkbox" id="terms" name="terms" value="terms" />
+              <input type="checkbox" id="terms" name="terms" value="yes" />
               <label for="terms">Terms and Conditions</label>
             </div>
             <div>
